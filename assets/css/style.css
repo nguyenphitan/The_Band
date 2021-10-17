@@ -208,11 +208,39 @@ Phân tích:
 
 
 /* Silder */
+
 #slider {
+    overflow: hidden;
     position: relative;
+    display: flex;
     margin-top: 46px;
-    padding-top: 50%;
+}
+
+.slider-img {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 50% 50% 0;
+    animation: fadeIn ease-in 10s infinite;
+}
+
+.slider-1 {
     background: url('../img/band/slider1.jpg') top center / cover no-repeat;
+}
+
+.slider-3 {
+    background: url('../img/band/slider2.jpg') top center / cover no-repeat;
+}
+
+.slider-2 {
+    background: url('../img/band/slider3.jpg') top center / cover no-repeat;
+}
+
+@keyframes fadeIn {
+    0%, 25% {left: 0%;}
+    35%, 60% {left: -100%;}
+    70%, 94% {left: -200%;}
+    100% {left: 0%;}
 }
 
 #slider .text-content {
@@ -644,6 +672,20 @@ header.modal-header {
     #nav .subnav a {
         color: #fff;
         padding: 5px 41px;
+    }
+
+    #slider .text-content {
+        bottom: 16px;
+        text-shadow: 0 0 2px #000;
+    }
+
+    #slider .text-heading {
+        font-size: 20px;
+    }
+    
+    #slider .text-description {
+        font-size: 14px;
+        margin-top: 8px;
     }
 
     #content .member-img {
