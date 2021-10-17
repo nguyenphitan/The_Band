@@ -104,7 +104,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn btn-style s-full-width">Buy Tickets</a>
+                                <button class="place-buy-btn btn-style s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
@@ -114,7 +114,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn btn-style s-full-width">Buy Tickets</a>
+                                <button class="place-buy-btn btn-style s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
@@ -124,7 +124,7 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn btn-style s-full-width">Buy Tickets</a>
+                                <button class="place-buy-btn btn-style s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                     </div>
@@ -179,6 +179,45 @@
         </div>
         <!-- End Content -->
 
+        <!-- Begin Modal -->
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <div class="modal-close js-modal-close">
+                    <i class="ti-close"></i>
+                </div>
+
+                <header class="modal-header">
+                    <i class="modal-heading-icon ti-bag"></i>
+                    Tickets
+                </header>
+
+                <div class="modal-body">
+
+                    <label for="modal-quantity" class="modal-label">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input id="modal-quantity" type="text" placeholder="How many?" class="modal-input id="quantity"">
+
+                    <label for="modal-email" class="modal-label">
+                        <i class="ti-user"></i>
+                        Send To
+                    </label>
+                    <input id="modal-email" type="email" placeholder="Enter email" class="modal-input">
+
+                    <button id="buy-tickets">
+                        Pay
+                        <i class="ti-check"></i>
+                    </button>
+                </div>
+                
+                <footer class="modal-footer">
+                    <p class="modal-help">Need <a href="#">help?</a></p>
+                </footer>
+
+            </div>
+        </div>
+        <!-- End Modal -->
 
         <!-- Begin Footer -->
         <div id="footer">
@@ -206,7 +245,6 @@
             <p class="copyright">Powered by <a href="#">w3.css</a></p>
         </div>
         <!-- End Footer -->
-
 
     </div>
 

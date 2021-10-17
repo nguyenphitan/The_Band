@@ -30,3 +30,33 @@ for(let i in menuItems) {
 }
 
 
+// Modal
+const modal = document.querySelector('.js-modal');
+const modalContainer = document.querySelector('.js-modal-container');
+const buyBtns = document.querySelectorAll('.js-buy-ticket');
+const modalClose = document.querySelector('.js-modal-close');
+
+// open modal
+function showBuyTickets() {
+    modal.classList.add('modal-open');
+}
+
+// close modal
+function hideBuyTickets() {
+    modal.classList.remove('modal-open');
+}
+
+//
+for(const buyBtn of buyBtns) {
+    buyBtn.addEventListener('click', showBuyTickets);
+}
+
+modalClose.addEventListener('click', hideBuyTickets);
+
+modal.addEventListener('click', hideBuyTickets);
+
+modalContainer.addEventListener('click', function(event) {
+    event.stopPropagation();
+})
+
+
