@@ -593,6 +593,11 @@ header.modal-header {
         padding: 5px 12px;
     }
 
+    .place-buy-btn {
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
     .contact-form .form-control {
         padding: 15px;
     }
