@@ -6,14 +6,16 @@ mobileMenu.addEventListener('click', () => {
     let isClose = header.clientHeight === headerHeight;
     if(isClose) {
         header.style.height = 'auto';
+        mobileMenu.style.backgroundColor = '#ccc';
     }
     else {
         header.style.height = null;
+        mobileMenu.style.backgroundColor = null;
     }
-
 })
 
 
+// go to subnav item and close menu
 const menuItems = document.querySelectorAll('#nav li a[href*="#"]');
 
 for(let i in menuItems) {
@@ -25,6 +27,7 @@ for(let i in menuItems) {
         }
         else {
             header.style.height = null;
+            mobileMenu.style.backgroundColor = null;
         }
     }
 }

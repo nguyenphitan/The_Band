@@ -199,14 +199,6 @@ Phân tích:
     background-color: #f44336;
 }
 
-#header .mobile-menu-btn:hover {
-    background-color: #ccc;
-}
-
-#header .mobile-menu-btn:hover .menu-icon {
-    color: #000;
-}
-
 #header .search-icon,
 #header .menu-icon {
     color: #fff;
@@ -633,6 +625,11 @@ header.modal-header {
 
     #nav > li:nth-child(1) {
         display: inline-block;
+    }
+
+    #nav .home-header:hover {
+        background-color: #000;
+        color: #fff;
     }
 
     #nav > li {
