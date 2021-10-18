@@ -1,6 +1,8 @@
 const header = document.getElementById('header');
 const mobileMenu = document.querySelector('#header .mobile-menu-btn');
 const headerHeight = header.clientHeight;
+
+
 // open / close menu
 mobileMenu.addEventListener('click', () => {
     let isClose = header.clientHeight === headerHeight;
@@ -20,6 +22,7 @@ const menuItems = document.querySelectorAll('#nav li a[href*="#"]');
 
 for(let i in menuItems) {
     let mItem = menuItems[i];
+    let check = 0;
     mItem.onclick = function(event) {
         let isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
         if(isParentMenu) {
@@ -31,6 +34,18 @@ for(let i in menuItems) {
         }
     }
 }
+
+// open / close subnav
+const subNav = document.querySelector('#nav .subnav');
+const navItemMore = document.querySelector('.js-nav-item');
+
+navItemMore.addEventListener('mousemove', function(event) {
+    subNav.style.display = 'block';
+})
+
+navItemMore.addEventListener('mouseout', function(event) {
+    subNav.style.display = 'none';
+})
 
 
 // Modal

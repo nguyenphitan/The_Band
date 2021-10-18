@@ -147,10 +147,6 @@ Phân tích:
     height: 100%;
 }
 
-#nav li:hover .subnav {
-    display: block;
-}
-
 #nav li:hover > a {
     color: #000;
     background-color: #ccc;
@@ -574,13 +570,11 @@ header.modal-header {
 }
 
 
-
-
 /* Responsive */
 
 /* PC */
 @media (min-width: 1024px) {
-
+    
 }
 
 /* Tablet & Mobile */
@@ -594,7 +588,7 @@ header.modal-header {
     }
 
     .place-buy-btn {
-        font-size: 18px;
+        font-size: 15px;
         text-transform: uppercase;
     }
 
