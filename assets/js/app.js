@@ -36,16 +36,42 @@ for(let i in menuItems) {
 }
 
 // open / close subnav
+const moreNav = document.querySelector('.js-more');
 const subNav = document.querySelector('#nav .subnav');
 const navItemMore = document.querySelector('.js-nav-item');
 
-navItemMore.addEventListener('mousemove', function(event) {
-    subNav.style.display = 'block';
-})
-
+if(screen.availWidth >= 740) { // PC & Tablet
+    navItemMore.addEventListener('mousemove', function(event) {
+        subNav.style.display = 'block';
+        moreNav.style.backgroundColor = '#ccc';
+        moreNav.style.color = '#000';
+    })
+}
+else {  // Mobile
+    moreNav.onclick = function(event) {
+        event.preventDefault();
+        if(subNav.clientHeight != 0) {
+            subNav.style.display = 'none';
+            moreNav.style.backgroundColor = '#000';
+            moreNav.style.color = '#fff';
+        }
+        else {
+            subNav.style.display = 'block';
+            moreNav.style.backgroundColor = '#ccc';
+            moreNav.style.color = '#000';
+        }
+    }
+}
+// close subnav (All)
 navItemMore.addEventListener('mouseout', function(event) {
     subNav.style.display = 'none';
+    if(subNav.clientHeight === 0) {
+        moreNav.style.backgroundColor = '#000';
+        moreNav.style.color = '#fff';
+    }
 })
+
+
 
 
 // Modal
